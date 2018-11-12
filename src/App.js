@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+// Components
+import EventCard_small from './components/EventCard_small';
+import EventCard_medium from './components/EventCard_medium';
+import EventCard_large from './components/EventCard_large';
+
+// Data
+import eventsData from './events';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {
+          eventsData.events.map(item => {
+            switch (item.size) {
+              case 's':
+                return <EventCard_small {...item} />
+              case 'm':
+                return <EventCard_medium {...item} />
+              case 'l':
+                return <EventCard_large {...item} />
+              default:
+                return <h1>error</h1>
+            }
+          })
+        }
       </div>
     );
   }

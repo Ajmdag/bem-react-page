@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="stylesheet" href="./index.css">
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -19,14 +21,51 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
+  <title>Яндекс.Дом</title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+  <header class="page__header header">
+    <a class="header__logo" href="#"><img src="./assets/YandexHome.svg" alt="" /></a>
+    <input class="header__checkbox" id="header-burger" type="checkbox" />
+    <nav class="header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link active" href="#">События</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Сводка</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Устройства</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Сценарии</a></li>
+        <li class="nav__item"><a class="nav__link" href="./video-observation.html">Видеонаблюдение</a></li>
+      </ul>
+    </nav>
+    <label class="header__burger burger" for="header-burger"><span class="burger__line"></span><span class="burger__line"></span><span
+        class="burger__line"></span></label>
+  </header>
+  <main class="content" role="main">
+    <h1 class="content__title">Лента событий</h1>
+    <div class="events-wrap"></div>
+  </main>
+  <footer class="footer-container">
+    <div class="footer">
+      <ul class="footer__list">
+        <li class="footer__item status"><a href="#">Помощь</a></li>
+        <li class="footer__item status"><a href="#">Обратная связь</a></li>
+        <li class="footer__item status"><a href="#">Разработчикам</a></li>
+        <li class="footer__item status"><a href="#">Условия использования</a></li>
+        <li class="footer__item status"><a href="https://docviewer.yandex.ru/view/1130000031416081/?*=1N6iLX8bhHuzpjXkPMxAtnkYE9h7InVybCI6InlhLXdpa2k6Ly93aWtpLWFwaS55YW5kZXgucnUvc2hyaS0yMDE4LWlpL2hvbWV3b3JrL2FkYXB0aXZuYWphLXZqb3JzdGthL2xpY2Vuc2UucGRmIiwidGl0bGUiOiJsaWNlbnNlLnBkZiIsInVpZCI6IjExMzAwMDAwMzE0MTYwODEiLCJ5dSI6IjY0MjY1NzI2MTE1MzcwNjk3NzciLCJub2lmcmFtZSI6ZmFsc2UsInRzIjoxNTM4ODk3MDY4NzczfQ%3D%3D"
+            target="_blank">Лицензия</a></li>
+      </ul>
+      <div class="footer__copyright-container">
+        <p class="footer__copyright">&copy; 2001&ndash;2017&nbsp;
+          <nobr>ООО &laquo;Яндекс&raquo;</nobr>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -36,5 +75,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
