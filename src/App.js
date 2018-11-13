@@ -11,7 +11,7 @@ import eventsData from './events';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="events-wrap">
         {
           eventsData.events.map(item => {
             switch (item.size) {
