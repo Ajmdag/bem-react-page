@@ -774,6 +774,31 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@bem-react/classname@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@bem-react/classname/-/classname-1.1.1.tgz#46083d11a8cfaa87d4b2c3793c806248532f0eb6"
+  integrity sha512-PRuEEqDHCCOdqqWmxqnsdr/RaLdJj5m71YxFuOpOX/EzdIrj++rDuAq9T7L309HxF7lLzlDGy6O7P78GhpfWcw==
+  dependencies:
+    "@bem/sdk.naming.entity.stringify" "1.1.1"
+
+"@bem-react/core@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@bem-react/core/-/core-1.2.0.tgz#fe94734230e9a997b8b8e902fb51fe5c6c83a528"
+  integrity sha512-QBD8HrMCvPjCCURMYOkuXfvUoFDNuDNHCGTpL4CCgXAhOTO4MxPsA7JBUx8WK21bBKcEhqydYyjkrbe2VkEEHA==
+  dependencies:
+    "@bem-react/classname" "^1.1.1"
+    object-assign "^4.1.1"
+
+"@bem-react/di@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@bem-react/di/-/di-1.0.3.tgz#f80dcc23ed280ebc16dc2127931cc476204fe4e7"
+  integrity sha512-aBKKjlb9zj8lAG9JwYA/3xs0BbYPet5B7epz6N7oJxt9gr4Am+yFCyTbiYbWKnlIbqBgAwIlPk7Hg0ACNU1cdA==
+
+"@bem/sdk.naming.entity.stringify@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@bem/sdk.naming.entity.stringify/-/sdk.naming.entity.stringify-1.1.1.tgz#4c4defea657350b5c103b3eae1a0ccd773ef12ce"
+  integrity sha512-5v1X0YKzbU9L8dMAtYI3S1TKn0cC6qA20gTi+MIAl35xf3zfMxFI//ayrpg6DMJohWCnYo4UkLJ9BJL3YPyrbw==
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
