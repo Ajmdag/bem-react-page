@@ -1,42 +1,42 @@
 import React, { Component } from 'react';
 import { cn } from '@bem-react/classname';
+import { withBemMod } from '@bem-react/core'
 
 // Libraries
 const classNames = require('classnames');
 
 const card = cn('Card');
 
-class EventCard_large extends Component {
-  render() {
+const Card_large = (w, props) => {
     const headerClass = classNames({
       [card('HeaderWrap', { large: true })]: true,
-      'critical': this.props.type === 'critical',
-      'have-description': this.props.description
+      'critical': props.type === 'critical',
+      'have-description': props.description
     });
     return (
       <div className={card({ large: true })}>
         <div className={headerClass}>
           <div className={card('Header', { large: true })}>
-            <img className={card('Logo', { large: true })} src={`./assets/${this.props.icon}.svg`} alt="" />
-            <p className={card('Title', { large: true })}>{this.props.title}</p>
+            <img className={card('Logo', { large: true })} src={`./assets/${props.icon}.svg`} alt="" />
+            <p className={card('Title', { large: true })}>{props.title}</p>
           </div>
           <div className={card('Status', { large: true })}>
-            <p className={card('Source', { large: true })}>{this.props.source}</p>
-            <p className={card('Time', { large: true })}>{this.props.time}</p>
+            <p className={card('Source', { large: true })}>{props.source}</p>
+            <p className={card('Time', { large: true })}>{props.time}</p>
           </div>
         </div>
         {
-          this.props.description &&
+          props.description &&
           <div className={card('Description', { large: true })}>
-            <p className={card('DescriptionParagraph', { large: true })}>{this.props.description}</p>
+            <p className={card('DescriptionParagraph', { large: true })}>{props.description}</p>
             {
-              this.props.data.type === 'graph' &&
+              props.data.type === 'graph' &&
               <div className={card('ImageContainer')}>
                 <img src="./assets/richdata.svg" className={card('Image')} alt="" />
               </div>
             }
             {
-            this.props.data.image &&
+            props.data.image &&
             <div className={card('ImageContainer')} id="hoover-container">
             <img className={card('Image')}
               id="hoover"
@@ -52,7 +52,10 @@ class EventCard_large extends Component {
         }
       </div>
     );
-  }
 }
 
-export default EventCard_large;
+export const cardLarge = withBemMod(
+  'asome',
+  { size: 'l' },
+  Card_large
+)

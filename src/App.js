@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
 // Components
-import EventCard_small from './components/EventCard_small';
-import EventCard_medium from './components/EventCard_medium';
-import EventCard_large from './components/EventCard_large';
+// import Card_small from './components/Card/_size/Card_small';
+// import Card_medium from './components/Card/_size/Card_medium';
+// import Card_large from './components/Card/_size/Card_large';
+
+import { Card } from './components/Card/index';
 
 // Data
 import eventsData from './events';
@@ -14,16 +16,7 @@ class App extends Component {
       <div className="events-wrap">
         {
           eventsData.events.map(item => {
-            switch (item.size) {
-              case 's':
-                return <EventCard_small {...item} />
-              case 'm':
-                return <EventCard_medium {...item} />
-              case 'l':
-                return <EventCard_large {...item} />
-              default:
-                return <h1>error</h1>
-            }
+            return <Card {...item} />
           })
         }
       </div>
